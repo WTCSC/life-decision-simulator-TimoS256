@@ -10,7 +10,7 @@ def add_item(dec, opts):
     else:
         print(f"dec:{dec}")
         print(f"opts:{opts}")
-
+        print(path)
         print('You feel as if something has gone very, very, wrong. You see objects vanish out of thin air, to be replaced with a vast darkness. The pebbles? Gone. The people? Gone. The cars? Gone. The buildings? Gone. The city? Gone. Slowly, more and more of this world is consumed. In time, all that remains is a string of words floating in the void, it reads: "Type error. process exited with error code -1"')
         quit()
 
@@ -38,7 +38,7 @@ def timeskip():
     
 
 
-decision(None,None,3,"\n (Type the number of the option you would like to do.) \n 1 :Turn off your alarm clock. \n 2 : Get up. \n 3. Go back to sleep \n Answer: ")
+decision(None,None,4,"\n (Type the number of the option you would like to do.) \n 1 :Turn off your alarm clock. \n 2 : Get up. \n 3. Go back to sleep \n Answer: ")
 if path[0] == 1:
 #    decision(None, None, , "")
     print("tempfix yay")
@@ -78,7 +78,33 @@ elif path[0] == 2:
         if retry == "2":
             quit()
 elif path[0] == 3:
-    print("tempfix aya")
+    awake = True
+    while awake == True:
+        g = input("You decide to get up. Nothing happened. \n 1: try again 2: go back to sleep \n >")
+        if g == "2":
+            awake = False
+            path.append(int(g))
+            print("While dreaming, you remeber that you had work today!")
+            decision(1, "Why would you do such a thing??? How could you!? \n Game Over.", 3 , "Do you... \n 1 : Get up and go to work \n 2 : Keep sleeping \n >")
+            if path[2] == 2:
+                print("After a satisfying amount of sleeping in, you finally wake up, yawn, stretch your arms, and lean over to your still-beeping alarm clock. right before you turn it off you feel a dense metal cube slam into the back of your head. ")
+                print("Next thing you know, you see a bright white light as you open your eyes to see the inside of an emergency room.")
+                print(path)
+                decision(2, "The lawsuit is not filed, you are now in an insurmountable amount of medical debt. \n Game Over.", 3, "Sue the cube for damages? \n 1: Yes \n 2: No \n >")
+                print(path)
+                if path[3] == 2:
+                    print("\n September 17, 1997. District courthouse. Courtroom No. 4")
+                    print("Judge: So. Your case states that Mister T. Cube here flew through you window somehow and hit you in the head? And for this you're asking for medical and property damage compensation. Is this correct?. Very good. Now how will you defend this claim?")
+                    decision(2, "You reach into your back pocket for your moss, but you realize you ate it all. Without a solid legal defense you lose the case. \n Game Over.", 3, "What evidence do you present to support your claim? \n 1: Medical Examination \n 2: A pile of moss. \n 3: Security footage from the nearby pool.")
+                    if path[4] == 1:
+                        print("Prosecution: So this medical record lines up with your claim, but I fail to see how this tungsten cube became airborne. If you cannot explain that, you cannot defend your claim. I don't believe that it somehow launched itself through your window. Do you even know how dense tungsten is?")
+                        print("The judge doesn't buy it, and your case is thrown out. Maybe representing yourself in a personal injury case wasn't the best idea")
+                        quit()
+                    elif path[4] == 3:
+                        print("The jury is shocked to see the cctv footage of the tungsten cube inexplicably flying out of the pool and into your window, despite the best efforts of the local lifeguard. The judge rules in your favor. The cube has been sentenced to life in prison, and you have been awarded a large sum of money.")
+                        print("Congradulations! You win! You are now Rich!")
+                        quit()
+
 
 
 
