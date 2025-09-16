@@ -79,6 +79,7 @@ elif path[0] == 2:
             quit()
 elif path[0] == 3:
     awake = True
+    input("A good amount of time passes, Hit enter to get up. \n")
     while awake == True:
         g = input("You decide to get up. Nothing happened. \n 1: try again 2: go back to sleep \n >")
         if g == "2":
@@ -90,12 +91,12 @@ elif path[0] == 3:
                 print("After a satisfying amount of sleeping in, you finally wake up, yawn, stretch your arms, and lean over to your still-beeping alarm clock. right before you turn it off you feel a dense metal cube slam into the back of your head. ")
                 print("Next thing you know, you see a bright white light as you open your eyes to see the inside of an emergency room.")
                 print(path)
-                decision(2, "The lawsuit is not filed, you are now in an insurmountable amount of medical debt. \n Game Over.", 3, "Sue the cube for damages? \n 1: Yes \n 2: No \n >")
+                decision(2, "The lawsuit is not filed, you are now in an insurmountable amount of medical debt. \n Game Over.", 2, "Sue the cube for damages? \n 1: Yes \n 2: No \n >")
                 print(path)
-                if path[3] == 2:
-                    print("\n September 17, 1997. District courthouse. Courtroom No. 4")
+                if path[3] == 1:
+                    print("\n ----------September 17, 1997. District courthouse. Courtroom No. 4---------- \n")
                     print("Judge: So. Your case states that Mister T. Cube here flew through you window somehow and hit you in the head? And for this you're asking for medical and property damage compensation. Is this correct?. Very good. Now how will you defend this claim?")
-                    decision(2, "You reach into your back pocket for your moss, but you realize you ate it all. Without a solid legal defense you lose the case. \n Game Over.", 3, "What evidence do you present to support your claim? \n 1: Medical Examination \n 2: A pile of moss. \n 3: Security footage from the nearby pool.")
+                    decision(2, "You reach into your back pocket for your moss, but you realize you ate it all. Without a solid legal defense you lose the case. \n Game Over.", 3, "What evidence do you present to support your claim? \n 1: Medical Examination \n 2: A pile of moss. \n 3: Security footage from the nearby pool. \n >")
                     if path[4] == 1:
                         print("Prosecution: So this medical record lines up with your claim, but I fail to see how this tungsten cube became airborne. If you cannot explain that, you cannot defend your claim. I don't believe that it somehow launched itself through your window. Do you even know how dense tungsten is?")
                         print("The judge doesn't buy it, and your case is thrown out. Maybe representing yourself in a personal injury case wasn't the best idea")
@@ -104,8 +105,6 @@ elif path[0] == 3:
                         print("The jury is shocked to see the cctv footage of the tungsten cube inexplicably flying out of the pool and into your window, despite the best efforts of the local lifeguard. The judge rules in your favor. The cube has been sentenced to life in prison, and you have been awarded a large sum of money.")
                         print("Congradulations! You win! You are now Rich!")
                         quit()
-
-
 
 
 
