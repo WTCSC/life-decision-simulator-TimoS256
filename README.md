@@ -31,3 +31,8 @@ If you really wannna contribute, make a fork, do as you wish, and open a pull re
 
 This project is licensed under the BSD Zero Clause License  
 See LICENSE.md for more information.
+
+
+## Flowchart:
+
+![flowchart](https://github.com/WTCSC/life-decision-simulator-TimoS256/blob/main/image.png)
