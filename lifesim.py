@@ -4,14 +4,14 @@ print("Welcome to the life simulator! you are Ross Ronald, the day is may 23, 19
 
 
 def add_item(dec, opts):
-    r = range(0,opts)
-    if dec in r:
-        path.append(int(dec))
-    else:
-        print(f"dec:{dec}")
-        print(f"opts:{opts}")
-        print(path)
-        print('You feel as if something has gone very, very, wrong. You see objects vanish out of thin air, to be replaced with a vast darkness. The pebbles? Gone. The people? Gone. The cars? Gone. The buildings? Gone. The city? Gone. Slowly, more and more of this world is consumed. In time, all that remains is a string of words floating in the void, it reads: "Type error. process exited with error code -1"')
+    r = range(0,opts+1)
+    try:
+        if dec in r:
+            path.append(int(dec))
+        else:
+            print('\n You feel as if something has gone very, very, wrong. You see objects vanish out of thin air, to be replaced with a vast darkness. The pebbles? Gone. The people? Gone. The cars? Gone. The buildings? Gone. The city? Gone. Slowly, more and more of this world is consumed. In time, all that remains is a string of words floating in the void, it reads: "Invalid input. process exited with error code -1"')
+            quit()
+    except:
         quit()
 
 
@@ -20,7 +20,11 @@ def decision(fail, failmsg, opt, text):
     selection = int
     print(path)
     while passing == False:
-        selection = int(input(text))
+        try:
+            selection = int(input(text))
+        except:
+            print('\n You feel as if something has gone very, very, wrong. You see objects vanish out of thin air, to be replaced with a vast darkness. The pebbles? Gone. The people? Gone. The cars? Gone. The buildings? Gone. The city? Gone. Slowly, more and more of this world is consumed. In time, all that remains is a string of words floating in the void, it reads: "Invalid input. process exited with error code -1"')
+            quit()
         if fail != selection:
             passing = True
             add_item(selection, opt)
@@ -32,16 +36,19 @@ def decision(fail, failmsg, opt, text):
 
 
 def timeskip():
-    print("After a while, you arrive back home. You notice that a tugnsten cube flew through your bedroom window and obliterated your alarm clock earlier today. You should have turned it off before you left.")
+    print("\n After a while, you arrive back home. You notice that a tugnsten cube flew through your bedroom window and obliterated your alarm clock earlier today. You should have turned it off before you left.")
     if path[0] == 1:
-        print("Even though you thought you turned your alarm off this morning, it happened to still be on for some reason.")
-    
+        print("\n Even though you thought you turned your alarm off this morning, it happened to still be on for some reason, that is until it ate tungsten.")
 
 
-decision(None,None,4,"\n (Type the number of the option you would like to do.) \n 1 :Turn off your alarm clock. \n 2 : Get up. \n 3. Go back to sleep \n Answer: ")
+
+decision(None,None,3,"\n (Type the number of the option you would like to do.) \n 1 : Turn off your alarm clock. \n 2 : Get up. \n 3 : Go back to sleep \n Answer: ")
 if path[0] == 1:
-#    decision(None, None, , "")
-    print("tempfix yay")
+    decision(2, "You should really be more respectful. \n Game Over.", 2, "with the sound of your alarm clock gone, you can hear your phone ringing. Its your parents. Pick up? \n 1 : Yes \n 2 : No \n >")
+    if path[1] == 1:
+        print("It turns out they need help with something. There go your plans for today!")
+        print("You feel mildly annoyed because you didn't get to choose what to do today, but you're glad to spend time with family.")
+        timeskip()
 elif path[0] == 2:
     decision(None, None, 2, "you get up, leave your bedroom, and think, What should I do today? \n 1 : Go for a walk outside \n 2 : Go rob a bank. \n Answer: ")
     if path[1] == 1:
@@ -74,9 +81,9 @@ elif path[0] == 2:
                 print("Youve decided to shove yourself into a fake money bag on the side of the road. Once inside, an armored truck drives by and stops. The drivers hop out and say to each other 'How did we lose one?' 'Lets throw it in the back just to be safe?' Shortly, you make it into the bank vault. You leave your bag just to trip a laser sensor and get caught. A month later you arrive in prison and meet you cellmate, a four-inch tungsten cube")
                 passing = True
                 quit()
-        retry = input("Would you like to retry? \n 1 : Yes. \n 2 : No \n > ")
-        if retry == "2":
-            quit()
+            retry = input("Would you like to retry? \n 1 : Yes. \n 2 : No \n > ")
+            if retry == "2":
+                quit()
 elif path[0] == 3:
     awake = True
     input("A good amount of time passes, Hit enter to get up. \n")
@@ -86,7 +93,7 @@ elif path[0] == 3:
             awake = False
             path.append(int(g))
             print("While dreaming, you remeber that you had work today!")
-            decision(1, "Why would you do such a thing??? How could you!? \n Game Over.", 3 , "Do you... \n 1 : Get up and go to work \n 2 : Keep sleeping \n >")
+            decision(1, "Why would you do such a thing??? How could you!? \n Game Over.", 2 , "Do you... \n 1 : Get up and go to work \n 2 : Keep sleeping \n >")
             if path[2] == 2:
                 print("After a satisfying amount of sleeping in, you finally wake up, yawn, stretch your arms, and lean over to your still-beeping alarm clock. right before you turn it off you feel a dense metal cube slam into the back of your head. ")
                 print("Next thing you know, you see a bright white light as you open your eyes to see the inside of an emergency room.")
