@@ -20,7 +20,7 @@ and run the file.
 python3 lifesim.py
 ```
 
-To play, enter a number when prompted and hit enter.
+To play, enter a number when prompted and hit enter.  
 Reality doesn't quite like it when one enters something other than the prompted options.
 
 ## Contribution:
@@ -29,5 +29,5 @@ If you really wannna contribute, make a fork, do as you wish, and open a pull re
 
 ## Licensing:
 
-This project is licensed under the BSD Zero Clause License
+This project is licensed under the BSD Zero Clause License  
 See LICENSE.md for more information.
