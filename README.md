@@ -8,5 +8,13 @@ This is a text based choose your own adventure game where you play as *Ross Rona
 * Python 3.11
 
 
-## 2. Installation: 
-`git clone `
+## 2. Installation and Usage:
+
+`git clone https://github.com/WTCSC/life-decision-simulator-TimoS256.git`
+
+`python3 lifesim.py`
+
+To play, enter a number when prompted and hit enter.
+Reality doesn't quite like it when one enters something other than the prompted options.
+
+
